@@ -83,7 +83,7 @@ client.on('message', async msg => {
         await delay (3000);
         await chat.sendStateTyping();
         await delay (3000);
-        await client.sendMessage(msg.from, 'Eu vou encaminhar o link do nosso catálogo abaixo para você conferir.\nCaso se interesse por algum é só clicar em comprar que estarei te esperando para te orientar nos próximos passos.\n\nhttps://online.fliphtml5.com/jnszk/kbjp/');
+        await client.sendMessage(msg.from, 'Eu vou encaminhar o link do nosso catálogo abaixo para você conferir.\nCaso se interesse por algum é só clicar em comprar que estarei te esperando para te orientar nos próximos passos.\n\nhttps://lavitaplanejados.wixsite.com/cozinhapronta');
 
         await delay(3000);
         await chat.sendStateTyping();

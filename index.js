@@ -20,9 +20,9 @@ function saudacao() {
     const data = new Date();
     let hora = data.getHours();
     let str = '';
-    if (hora >= 5 && hora < 12) {
+    if (hora >= 8 && hora < 15) {
         str = '*Bom dia!*';
-    } else if (hora >= 12 && hora < 18) {
+    } else if (hora >= 15 && hora < 21) {
         str = '*Boa tarde!*';
     } else {
         str = '*Boa noite!*';
@@ -33,7 +33,7 @@ function atendente() {
     const data = new Date();
     let hora = data.getHours();
     let strdois = '';
-    if (hora >= 8 && hora < 20) {
+    if (hora >= 11 && hora < 23) {
         strdois = '😃 Aguarde um momento que logo será atendido.';
     } else {
         strdois = 'Humm... \n😒 Já estamos fora do horário de atendimento.\n\n😃 Mas não se preocupe, retornaremos assim que possível!\n\n🕖 _Nosso horário é de segunda a sábado de 08:00hs às 20:00hs._';

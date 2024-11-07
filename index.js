@@ -70,7 +70,7 @@ client.on('message', async msg => {
         
     
         
-    }else if (msg.body === "Olá") {
+    }else if (msg.body === 'Olá') {
 
         const chat = await msg.getChat();
 
@@ -83,7 +83,7 @@ client.on('message', async msg => {
         
     
         
-    }else if (msg.body === "Olá!") {
+    }else if (msg.body === 'Olá!') {
 
         const chat = await msg.getChat();
 
@@ -96,7 +96,7 @@ client.on('message', async msg => {
         
     
         
-    }else if (msg.body === "Oi!") {
+    }else if (msg.body === 'Oi!') {
 
         const chat = await msg.getChat();
 
@@ -177,8 +177,8 @@ client.on('message', async msg => {
         await delay (3000);
         await chat.sendStateTyping();
         await delay(3000);
-        await client.sendMessage(msg.from, '🥳 *Perfeito!*\n\nVou aguardar dois minutos para que nos envie os conteúdos que possuir com calma.\nEm seguida irei prosseguir com o seu atendimento. 😉');
-        await delay(120000);
+        await client.sendMessage(msg.from, '🥳 *Perfeito!*\n\nVou aguardar um minuto para que nos envie os conteúdos que possuir com calma.\nEm seguida irei prosseguir com o seu atendimento. 😉');
+        await delay(60000);
         await chat.sendStateTyping();
         await delay(3000);
         await client.sendMessage(msg.from, '*Vamos dar continuidade com o seu atendimento?*\n\nEnquanto aguarda, vou deixar o link do nosso instagram abaixo para conhecer um pouco mais sobre nosso trabalho. 👇\n\nhttps://www.instagram.com/la_vita_planejados?igsh=b3VweXg2bHVxYm50&utm_source=qr');

@@ -57,7 +57,7 @@ const delay = ms => new Promise(res => setTimeout(res, ms)); // Função que usa
 
 client.on('message', async msg => {
 
-    if (msg.body.match (/(Oi|Olá)/i) && msg.from.endsWith('@c, us')) {
+    if (msg.body.match (/(Oi|Olá)/i) && msg.from.endsWith('@c.us')) {
 
         const chat = await msg.getChat();
 

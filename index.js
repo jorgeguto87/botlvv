@@ -67,49 +67,10 @@ client.on('message', async msg => {
         const contact = await msg.getContact(); //Pegando o contato
         const name = contact.pushname; //Pegando o nome do contato
         await client.sendMessage(msg.from, '*🙋‍♂️ Olá* '+ name.split(" ")[0] + '! ' + saudacao() + '\n\n*Sou o Vitor, assistente virtual da La Vita Planejados!*\n_Como posso ajudar?_\n\n➡️ Por favor, digite o *NÚMERO* de uma das opções abaixo:\n\n1️⃣ - Realizar projeto\n2️⃣ - Catálogos\n3️⃣ - Assistência técnica\n4️⃣ - Acompanhar entrega\n5️⃣ - Outros assuntos'); //Primeira mensagem de texto
+           
         
     
-        
-    }else if (msg.body === 'Olá') {
-
-        const chat = await msg.getChat();
-
-        await delay(3000); //delay de 3 segundos
-        await chat.sendStateTyping(); // Simulando Digitação
-        await delay(3000); //Delay de 3000 milisegundos mais conhecido como 3 segundos
-        const contact = await msg.getContact(); //Pegando o contato
-        const name = contact.pushname; //Pegando o nome do contato
-        await client.sendMessage(msg.from, '*🙋‍♂️ Olá* '+ name.split(" ")[0] + '! ' + saudacao() + '\n\n*Sou o Vitor, assistente virtual da La Vita Planejados!*\n_Como posso ajudar?_\n\n➡️ Por favor, digite o *NÚMERO* de uma das opções abaixo:\n\n1️⃣ - Realizar projeto\n2️⃣ - Catálogos\n3️⃣ - Assistência técnica\n4️⃣ - Acompanhar entrega\n5️⃣ - Outros assuntos'); //Primeira mensagem de texto
-        
-    
-        
-    }else if (msg.body === 'Olá!') {
-
-        const chat = await msg.getChat();
-
-        await delay(3000); //delay de 3 segundos
-        await chat.sendStateTyping(); // Simulando Digitação
-        await delay(3000); //Delay de 3000 milisegundos mais conhecido como 3 segundos
-        const contact = await msg.getContact(); //Pegando o contato
-        const name = contact.pushname; //Pegando o nome do contato
-        await client.sendMessage(msg.from, '*🙋‍♂️ Olá* '+ name.split(" ")[0] + '! ' + saudacao() + '\n\n*Sou o Vitor, assistente virtual da La Vita Planejados!*\n_Como posso ajudar?_\n\n➡️ Por favor, digite o *NÚMERO* de uma das opções abaixo:\n\n1️⃣ - Realizar projeto\n2️⃣ - Catálogos\n3️⃣ - Assistência técnica\n4️⃣ - Acompanhar entrega\n5️⃣ - Outros assuntos'); //Primeira mensagem de texto
-        
-    
-        
-    }else if (msg.body === 'Oi!') {
-
-        const chat = await msg.getChat();
-
-        await delay(3000); //delay de 3 segundos
-        await chat.sendStateTyping(); // Simulando Digitação
-        await delay(3000); //Delay de 3000 milisegundos mais conhecido como 3 segundos
-        const contact = await msg.getContact(); //Pegando o contato
-        const name = contact.pushname; //Pegando o nome do contato
-        await client.sendMessage(msg.from, '*🙋‍♂️ Olá* '+ name.split(" ")[0] + '! ' + saudacao() + '\n\n*Sou o Vitor, assistente virtual da La Vita Planejados!*\n_Como posso ajudar?_\n\n➡️ Por favor, digite o *NÚMERO* de uma das opções abaixo:\n\n1️⃣ - Realizar projeto\n2️⃣ - Catálogos\n3️⃣ - Assistência técnica\n4️⃣ - Acompanhar entrega\n5️⃣ - Outros assuntos'); //Primeira mensagem de texto
-        
-    
-        
-    }else if (msg.body === "Opa") {
+    };if (msg.body === "Opa") {
 
         const chat = await msg.getChat();
 

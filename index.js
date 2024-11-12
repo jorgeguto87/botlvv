@@ -60,7 +60,7 @@ client.on('message', async msg => {
     if (msg.body.match (/(Oi|Olá)/i) && msg.from.endsWith('@c.us')) {
 
         const chat = await msg.getChat();
-        const logo = MessageMedia.fromFilePath(./logo.jpg);
+        const logo = MessageMedia.fromFilePath ('./logo.jpg');
 
         await delay(3000); //delay de 3 segundos
         await chat.sendStateTyping(); // Simulando Digitação
@@ -74,7 +74,7 @@ client.on('message', async msg => {
     };if (msg.body === "Opa") {
 
         const chat = await msg.getChat();
-        const logo = MessageMedia.fromFilePath(./logo.jpg);
+        const logo = MessageMedia.fromFilePath ('./logo.jpg');
 
         await delay(3000); //delay de 3 segundos
         await chat.sendStateTyping(); // Simulando Digitação
@@ -88,7 +88,7 @@ client.on('message', async msg => {
     }else if (msg.body === "Opa!") {
 
         const chat = await msg.getChat();
-        const logo = MessageMedia.fromFilePath(./logo.jpg);
+        const logo = MessageMedia.fromFilePath ('./logo.jpg');
 
         await delay(3000); //delay de 3 segundos
         await chat.sendStateTyping(); // Simulando Digitação

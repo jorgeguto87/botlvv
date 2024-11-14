@@ -57,7 +57,7 @@ function atendente() {
     if (hora >= 11 && hora < 23) {
         strdois = '😃 Aguarde um momento que logo será atendido.';
     } else if (isFeriado()){
-        strdois = '🏖️ *Aproveite o Feriado*\n\n😃 Assim que retornarmos em nossas atividades, um de nossos atendentes irá falar com você.\n\n🕖 _Nosso horário é de segunda a sábado de 08:00hs às 20:00hs._';
+        strdois = '🏖️ *Aproveite o Feriado*\n\n😃 Assim que retornarmos em nossas atividades, um dos atendentes irá falar com você.\n\n🕖 _Nosso horário é de segunda a sábado de 08:00hs às 20:00hs._';
     }
     
     else {
@@ -70,7 +70,7 @@ function domingo() {
     let dia = data.getDay();
     let strtres = '';
     if (dia === 0) {
-        strtres = '🏖️ *Aproveite o fim de semana!*\n\n😃 Assim que retornarmos em nossas atividades, um de nossos atendentes irá falar com você.\n\n🕖 _Nosso horário é de segunda a sábado de 08:00hs às 20:00hs._';
+        strtres = '🏖️ *Aproveite o fim de semana!*\n\n😃 Assim que retornarmos em nossas atividades, um dos atendentes irá falar com você.\n\n🕖 _Nosso horário é de segunda a sábado de 08:00hs às 20:00hs._';
     } else {
         strtres = atendente();
         }

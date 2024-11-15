@@ -53,19 +53,18 @@ function isFeriado() {
 function atendente() {
     const data = new Date();
     let hora = data.getHours();
-    const dataAtual = `${String(hoje.getMonth() + 1).padStart(2, '0')}-${String(hoje.getDate()).padStart(2, '0')}`;
     let strdois = '';
-    if (hora >= 11 && hora < 23) {
-        strdois = '😃 Aguarde um momento que logo será atendido.';
-    } else if (dataAtual === feriados){
+
+    if (isFeriado()) {
         strdois = '🏖️ *Aproveite o Feriado*\n\n😃 Assim que retornarmos em nossas atividades, um de nossos atendentes irá falar com você.\n\n🕖 _Nosso horário é de segunda a sábado de 08:00hs às 20:00hs._';
-    }
-    
-    else {
+    } else if (hora >= 11 && hora < 23) {
+        strdois = '😃 Aguarde um momento que logo será atendido.';
+    } else {
         strdois = 'Humm... \n😒 Já estamos fora do horário de atendimento.\n\n😃 Mas não se preocupe, retornaremos assim que possível!\n\n🕖 _Nosso horário é de segunda a sábado de 08:00hs às 20:00hs._';
-        }
+    }
+
     return strdois;
-};
+}
 function domingo() {
     const data = new Date();
     let dia = data.getDay();
@@ -613,14 +612,15 @@ client.on('message', async msg => {
 
 
     }
-    else if (msg.body && horaautal < inicioatend || horaautal > fimatend) {
+    else if (msg.body && (horaautal < inicioatend || horaautal > fimatend || isFeriado() || new Date.getDay() === 0)) {
+        if (!msg.from.includes('@g.us')) {
         const contact = msg.from;
         const contato = await msg.getContact();
         const nome = contato.pushname;
         const texto = `Enviou mensagem para a La Vita! \n\nVou te passar os dados de contato e mensagem:\n ${contact}:\n ${msg.body}`;
         await client.sendMessage (jorge, '🙋‍♂️ *Oi Jorge, sou eu o Vitor!* \n\n*O cliente:* ' + nome.split(' ')[0] + '\n' +  texto);
         await client.sendMessage (marcus, '🙋‍♂️ *Oi Marcus, sou eu o Vitor!* \n\n*O cliente:* ' + nome.split(' ')[0] + '\n' +  texto);
-
+        }
     };
 
 

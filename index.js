@@ -612,7 +612,7 @@ client.on('message', async msg => {
 
 
     }
-    else if (horaautal < inicioatend || horaautal > fimatend && msg.from.endsWith('@c.us')) {
+    else if (msg.body && horaautal < inicioatend || horaautal > fimatend) {
         const contact = msg.from;
         const contato = await msg.getContact();
         const nome = contato.pushname;

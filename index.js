@@ -53,10 +53,11 @@ function isFeriado() {
 function atendente() {
     const data = new Date();
     let hora = data.getHours();
+    const dataAtual = `${String(hoje.getMonth() + 1).padStart(2, '0')}-${String(hoje.getDate()).padStart(2, '0')}`;
     let strdois = '';
     if (hora >= 11 && hora < 23) {
         strdois = '😃 Aguarde um momento que logo será atendido.';
-    } else if (isFeriado()){
+    } else if (dataAtual === feriados){
         strdois = '🏖️ *Aproveite o Feriado*\n\n😃 Assim que retornarmos em nossas atividades, um de nossos atendentes irá falar com você.\n\n🕖 _Nosso horário é de segunda a sábado de 08:00hs às 20:00hs._';
     }
     

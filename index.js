@@ -141,7 +141,7 @@ client.on('message', async msg => {
         await client.sendStateRecording();
         await delay(10000);
         await client.sendMessage(msg.from, audio, {sendAudioAsVoice: true});
-        await delay(100000);
+        await delay(90000);
         await chat.sendStateTyping();
         await delay(3000);
         await client.sendMessage(msg.from, '😃 Toda informação é muito útil além de importante na hora de construir o seu projeto.\n\n➡️ Caso possua a planta do ambiente, medidas ou imagens, vai nos ajudar muito.');

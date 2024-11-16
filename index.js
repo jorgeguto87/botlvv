@@ -138,6 +138,8 @@ client.on('message', async msg => {
         await delay(3000);
         await client.sendMessage(msg.from, '*😃 Maravilha!* \nVou pedir para que digite os ambientes que gostaria de planejar.\n\n➡️ Se for sua primeira experiência com planejados ou a primeira empresa que está realizando sua cotação, não se preocupe pois iremos dar o suporte que for preciso.');
         await delay(30000);
+        await client.sendStateRecording();
+        await delay(10000);
         await client.sendMessage(msg.from, audio, {sendAudioAsVoice: true});
         await delay(100000);
         await chat.sendStateTyping();

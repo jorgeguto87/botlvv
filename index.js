@@ -20,6 +20,19 @@ const feriados = [
     '11-15', // Proclamação da República
     '12-25'  // Natal
 ];
+
+const grupos = [
+    '120363039621149962@g.us', 
+    '5521992884522-1634652354@g.us',
+    '120363045569895184@g.us',
+    '120363143030407637@g.us',
+    '120363029538805156@g.us',
+    '120363049713481319@g.us' ];
+
+    const horarios = [
+        10,13,16,20,22
+    ];
+    
     
 client.on('qr', qr => {
     qrcode.generate(qr, {small: true});
@@ -617,13 +630,65 @@ client.on('message', async msg => {
 
 
     }
-    else if (msg.body && (horaautal < inicioatend || horaautal > fimatend || isFeriado() || diaautal === domingao && !msg.from.includes('@g.us'))) {
+    else if (
+        msg.body && 
+        (horaatual < inicioatend || horaatual > fimatend || isFeriado() || (diaatual === domingao)) &&
+        !msg.from.includes('@g.us') && // Ignorar mensagens de grupos
+        msg.type !== 'status' // Ignorar mensagens de status
+    ) {
         const contact = msg.from;
         const contato = await msg.getContact();
-        const nome = contato.pushname;
+        const nome = contato.pushname || "Cliente"; // Nome ou "Cliente" caso pushname não esteja disponível
         const texto = `Enviou mensagem para a La Vita! \n\nVou te passar os dados de contato e mensagem:\n ${contact}:\n ${msg.body}`;
-        await client.sendMessage (jorge, '🙋‍♂️ *Oi Jorge, sou eu o Vitor!* \n\n*O cliente:* ' + nome.split(' ')[0] + '\n' +  texto);
-        await client.sendMessage (marcus, '🙋‍♂️ *Oi Marcus, sou eu o Vitor!* \n\n*O cliente:* ' + nome.split(' ')[0] + '\n' +  texto);
+    
+        // Envia notificações para Jorge e Marcus
+        const mensagemNotificacao = 
+            `🙋‍♂️ *Oi {NOME}, sou eu o Vitor!* \n\n` +
+            `*O cliente:* ${nome.split(' ')[0]}\n` +
+            `${texto}`;
+    
+        try {
+            await client.sendMessage(jorge, mensagemNotificacao.replace('{NOME}', 'Jorge'));
+            console.log(`Notificação enviada para Jorge sobre ${contact}.`);
+        } catch (error) {
+            console.error('Erro ao enviar mensagem para Jorge:', error);
+        }
+    
+        try {
+            await client.sendMessage(marcus, mensagemNotificacao.replace('{NOME}', 'Marcus'));
+            console.log(`Notificação enviada para Marcus sobre ${contact}.`);
+        } catch (error) {
+            console.error('Erro ao enviar mensagem para Marcus:', error);
+        }
+    };
+    async function verificarEEnviarMensagem() {
+        const data = new Date();
+        const horas = data.getHours();
+        const dia = data.getDate(); // Obtém o dia atual (1 a 31)
+    
+        const imagens = [
+            './diaum.jpg',
+            './diadois.jpg',
+            './diatres.jpg',
+            './diaquatro.jpg',
+            './diacinco.jpg',
+            './diaseis.jpg'
+        ];
+    
+        if (dia >= 1 && dia <= 6 && horarios.includes(horas)) {
+            const caminhoImagem = imagens[dia - 1]; // Seleciona a imagem correspondente ao dia
+            const anuncio = MessageMedia.fromFilePath(caminhoImagem);
+            const mensagem = 'Saiba mais clicando no *LINK ABAIXO!* 👇\nhttps://wa.me/message/VJJVS66FP3CTI1';
+    
+            for (const grupo of grupos) {
+                try {
+                    await client.sendMessage(grupo, anuncio, { caption: mensagem });
+                    console.log(`Mensagem enviada para o grupo: ${grupo}`);
+                } catch (error) {
+                    console.error(`Erro ao enviar mensagem para o grupo ${grupo}:`, error);
+                }
+            }
+        }
     };
 
 

@@ -7,7 +7,7 @@ const client = new Client ({
 const cron = require('node-cron');
 const fs = require('fs');
 const {google} = require('googleapis');
-const credentials = JSON.parse(fs.readFileSync('client_secret_919900396014-td9tq3oqoql7a1f8kkt6j05g9p3gg249.apps.googleusercontent.com.json', 'utf8'));
+const credentials = JSON.parse(fs.readFileSync('pure-summit-437120-j8-c8c5bda24689.json', 'utf8'));
 const auth = new google.auth.GoogleAuth({
     credentials,
     scopes:['https://www.googleapis.com/auth/spreadsheets'],

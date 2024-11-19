@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "pure-summit-437120-j8",
+  "private_key_id": "c8c5bda24689c1b9f84ac5b181461e4e22d327de",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCVdp7as0Pktn+N\njXMgLtSNfIaK2Tl1IAs/Mx0uDUSIdAycECSq61MqW2FHzlXQo1J6jXC6kTNkwfPn\nHQ6ZcfYZr7PNKOnbQQs4HoKvaUTvp32HDwf/Q4pbwKWPPGcWIY4jMD0IldluMsys\nN1BygmK/Dhsyn3xsgIFv9GTx9Z6S64Llcx6cHdjZQONCG7/AaBFU2xdNgjaW46+B\nL0hbIQMq0NhNr7MM9FpIE+jeK34zkFzZOMEyEtXp/yGqh/l1SGyKeYQVhXlamFm9\nbnKVGHOBP2iPdXXnplHyElSY/jYr859coO8ES+YKuExlBgjh8y8q590pByP/5SXy\n9Hpygc/lAgMBAAECggEAC94qjfC8Zt2WMj4K6AF1RN4gQXKEgp2D7HBEFGM0T7tw\nluHHROprpPTdkW87rCs+bNcXSOZ8/2FRMHGZC6vGCqhuF/p0MJcxFgiCKv3VCKHd\nhfW2a66daVyvfg33R4VsPQoNsUVTdFHEo7YUBWD/Xe6iT+TkYynZsp3kIrxJ654i\n+pVpX+FFtI7fobujIOCHbErx5dIUaEBzv3NWDnGMYAVH9FrykJ5P07C4zo0uZfQB\njRGZsrpJRwdMP1DIRKciQPuZn+JM7G0XKKwOPhVggCmoxDlpHaQqP3tTP/2SklV4\nDIw6VHeSQG0gfNo/NZAVk5PbaW9Beios+3VDu34zsQKBgQDLN4R6b1xsjGzwdVPV\ni6d66m6Oxw0psfO9C8gpWI1ncZ+OfbQumsfzeQZ0NKjoOuGgD7kOfZIDPueCCBia\nIhATGQbIKr3Wt60XEXnFuT0we43fnkFW8BafSojqkYVrqsc3S8xa7oliGiONJWIo\nUYIG3WqQuH/WgzMmuL8e6ezPPQKBgQC8SOAsBwpug5XyIWxYmySV0VhpXSSlqvwh\nhrDIB1OwX544+zAzTfsFbZy8Hr/X+cLoMHrljEEyoZ5ewf3q4odNjpQZWsqMGBuZ\nGgrh7s6Qw5WpWchLYxpkDQFKL0/M/la0AT0OpL2FA5N6/gLmy/PzWFT3wu/+MIB7\n0oCh1hENyQKBgDpPetb630VSYev5bo3G3c66N/EGErPVGQA0wkGC5Eg7ZTIoxavd\nw+QL5RsxBQpl4tnfyRTsWRpPUXSRSCXqAjzIoJaNFR3oZGVLIWrnxTQFL+drbIo6\np/MbGwBbszH6teEbAc9RxN/+ahcVE/5HrQy1Od++4Qe3a9T/i++d5dJtAoGAIsYy\n4O7L9m1HHFkf8Z11vFXVxl/1jMNvnaGKtOblhgWi61M5K8CTRAVilTv4oqL2ZHvP\ntuWYhQlkfovFocQEyUY0BBrInec18ajlqaS5cfMtiQGUBJhhH2lne5QRYQL4cHZq\nGHJErnRioKyZTJcOjzsZNklCmefLUxMlvr4SmEECgYAYeASuky4n/cgRt4s4weZ5\naZEtdU2wLUOrvwB+JZ8EO4T3Soxc6Rvj6BwhjJUjJESIKg6vBGtOWt+kCsA6XKPo\ncXIXJ83bwXDnIVNDdz+rB5N0QKaq+sdtkaTF21z3+BPjqorlLNj1GOoy3EJpHtLM\nWRXUFzL5YB6WJAOi9i6XGA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "lavitaplanejados@pure-summit-437120-j8.iam.gserviceaccount.com",
+  "client_id": "116682642015753002757",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lavitaplanejados%40pure-summit-437120-j8.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
